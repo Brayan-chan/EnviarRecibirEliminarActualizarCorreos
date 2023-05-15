@@ -1,5 +1,7 @@
 //clase
 package main;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 /**
@@ -30,10 +32,14 @@ class Correo {
     
     
     private String obtenerFechaActual() {
-        // Obtener la fecha actual en el formato deseado
-        // Aquí puedes utilizar alguna biblioteca de manipulación de fechas en Java
-        // Por simplicidad, aquí se utiliza un formato básico
-        return "2023-05-14";
+        LocalDateTime fechaActual = LocalDateTime.now();
+        DateTimeFormatter fechaFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        DateTimeFormatter horaFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        String fecha = fechaActual.format(fechaFormatter);
+        String hora = fechaActual.format(horaFormatter);
+        return fecha + " " + hora;
+    
+        //return "2023-05-14";
     }
     
     public String getLineaCuerpo(int index) {

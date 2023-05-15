@@ -19,12 +19,12 @@ public class Main {
         int opcion;
         do {
             System.out.println("Menu de opciones:");
-            System.out.println("1. Escribir correo electrónico");
-            System.out.println("2. Consultar correo electrónico");
-            System.out.println("3. Borrar correo electrónico");
+            System.out.println("1. Escribir correo electronico");
+            System.out.println("2. Consultar correo electronico");
+            System.out.println("3. Borrar correo electronico");
             System.out.println("4. Borradores");
             System.out.println("0. Salir");
-            System.out.println("Ingrese su opción: ");
+            System.out.println("Ingrese su opcion: ");
             opcion = scanner.nextInt();
             scanner.nextLine();
             
@@ -55,8 +55,8 @@ public class Main {
     private static void escribirCorreo() {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Escribir correo electrónico");
-        System.out.println("Status: Escribiendo");
+        System.out.println("Escribir correo electronico");
+        System.out.println("Status: Escribiendo...");
         System.out.println("Remitente: ");
         String remitente = scanner.nextLine();
         System.out.println("Destinatario: ");
@@ -73,14 +73,14 @@ public class Main {
         String cuerpo = cuerpoBuilder.toString();
         
         System.out.println("Opciones:");
-    System.out.println("1. Enviar");
-    System.out.println("2. Guardar como borrador");
-    System.out.println("3. Salir");
-    System.out.println("Ingrese su opción: ");
-    int opcion = scanner.nextInt();
-    scanner.nextLine(); // Consumir la nueva línea pendiente
+        System.out.println("1. Enviar");
+        System.out.println("2. Guardar como borrador");
+        System.out.println("3. Salir");
+        System.out.println("Ingrese su opcion: ");
+        int opcion = scanner.nextInt();
+        scanner.nextLine(); // Consumir la nueva línea pendiente
     
-    switch (opcion) {
+        switch (opcion) {
         case 1:
             // Enviar el correo
             Correo correo = new Correo(remitente, destinatario, asunto, cuerpo);
@@ -99,13 +99,13 @@ public class Main {
             break;
         case 3:
             // Regresar al menú
-            System.out.println("Regresando al menú...");
+            System.out.println("Regresando al menu...");
             break;
         default:
-            System.out.println("Opción inválida. Regresando al menú...");
+            System.out.println("Opcion invalida. Regresando al menu...");
             break;
     }
-    }
+}
     
     private static void consultarCorreo() {
         Scanner scanner = new Scanner(System.in);
